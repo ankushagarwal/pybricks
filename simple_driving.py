@@ -17,7 +17,7 @@ MAX_STEERING_ANGLE = 35  # from the block: steering * 35 / 100
 def drive_at_speed_while_steering(speed_percent, steering_percent):
     steering_target = steering_percent * MAX_STEERING_ANGLE / 100
     steering_motor.run_target(STEERING_SPEED, steering_target, wait=False)
-    drive_motor.run(speed_percent * DRIVE_SPEED_SCALE)
+    drive_motor.run(-speed_percent * DRIVE_SPEED_SCALE)
 
 
 # Center steering first.
