@@ -69,12 +69,13 @@ scanner_motor.control.limits(speed=SCANNER_SPEED)
 go_to_shortest_position(scanner_motor, SCANNER_SPEED, 0)
 drive_motor.stop()
 
+
 while True:
     drive_at_speed_while_steering(50, 0)
 
-    # while distance_sensor.distance() >= 200:
-    #     wait(10)
+    while distance_sensor.distance() >= 200:
+        wait(200)
 
-    # drive_motor.stop()
-    # honk()
-    # look_around()
+    drive_motor.stop()
+    honk()
+    look_around()
