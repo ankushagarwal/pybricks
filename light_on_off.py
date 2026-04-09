@@ -14,3 +14,5 @@ for i in range(5):
 
     hub.light.on(Color.GREEN)
     wait(500)
+
+wait(50000)

@@ -24,14 +24,21 @@ def drive_at_speed_while_steering(speed_percent, steering_percent):
 steering_motor.run_target(STEERING_SPEED, 0)
 
 # Let drive motor coast when stopped.
-drive_at_speed_while_steering(70, 0)
-wait(1000)
+drive_at_speed_while_steering(70, 50)
+wait(2000)
 
-drive_at_speed_while_steering(50, 100)
-wait(1000)
+# drive_at_speed_while_steering(-70, 0)
+# wait(2000)
 
-drive_at_speed_while_steering(50, -100)
-wait(1000)
+# drive_at_speed_while_steering(50, 100)
+# wait(1000)
+
+# drive_at_speed_while_steering(50, -100)
+# wait(1000)
 
 drive_motor.stop()
 steering_motor.run_target(STEERING_SPEED, 0, then=Stop.HOLD)
+
+drive_at_speed_while_steering(-70, 50)
+wait(2000)
+steering_motor.run_target(STEERING_SPEED, 0)
